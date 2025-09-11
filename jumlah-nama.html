@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS - Hitung Jumlah Huruf Nama</title>
+</head>
+<body>
+    <h1>Menghitung jumlah huruf Nama</h1>
+    <script>
+        let nama = ["DIKA","ANGGARA","RPL","STEMPERT"]; //Membuat array berisi daftar nama
+        let hasil = nama.map(nama => { //Menggunakan method map untuk menghitung jumlah huruf pada setiap nama
+            let length = nama.length; //Menghitung jumlah huruf pada nama
+            return {
+                //mengembalikan objek dengan nama, jumlah huruf, dan hasil perkalian jumlah huruf dengan 5
+                nama: nama, //menyimpan nama
+                jumlah_huruf: length, //menyimpan jumlah huruf pada nama
+                hasil: length * 5 //mengalikan jumlah huruf dengan 5
+            };
+        });
+        console.log(hasil); //Menampilkan hasil pada console
+    </script>
+</body>
+</html>

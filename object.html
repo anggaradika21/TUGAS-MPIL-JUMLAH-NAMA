@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Object</title>
+</head>
+<body>
+  <h2>Contoh Object</h2>
+  <p id="object"></p>
+
+  <script>
+      // Membuat object taruna dengan let
+    const taruna = {
+      nama: "DIKA ANGGARA",
+      umur: 16,
+      sekolah: "SMKN 2 SUBANG",
+      jurusan: "Rekayasa Perangkat Lunak",
+      perkenalan: function() {
+        return `Halo, saya ${this.nama}, dari sekolah ${this.sekolah}, dengan jurusan ${this.jurusan}, umur saya ${this.umur} tahun.`;
+      }
+    };
+
+    // Menampilkan data dari object taruna
+   // let output = "<b>Data Taruna:</b><br>";
+    //output += taruna.perkenalan();
+       
+    // Menampilkan hasil ke HTML
+    //document.getElementById("object").innerHTML = output;
+
+
+        //Kode dibawah digunakan untuk menampilkan di console
+
+    // Memanggil properti/object ke consple 
+ console.log(taruna.nama); 
+ console.log(taruna.umur);
+ console.log(taruna["jurusan"]);
+
+    // Memanggil method                 
+ console.log(taruna.perkenalan()); 
+
+  </script>
+</body>
+</html>

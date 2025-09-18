@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Todo DOM JS</title>
+<style>
+  body{font-family:sans-serif;padding:20px}
+  ul{padding:0;list-style:none}
+  li{margin:6px 0;padding:6px;border:1px solid #0040e0;display:flex;justify-content:space-between}
+  li.done{text-decoration:line-through;color:rgb(51, 175, 40)}
+</style>
+</head>
+<body>
+  <h1>java script</h1>
+  <input id="task" placeholder="Tulis tugas...">
+  <button onclick="add()">Tambah</button>
+  <ul id="list"></ul>
+
+<script>
+  function add(){
+    const text = task.value.trim()
+    if(!text) return
+    const li = document.createElement("li")
+    li.innerHTML = `<span>${text}</span> <button>❌</button>`
+    li.querySelector("span").onclick = () => li.classList.toggle("done")
+    li.querySelector("button").onclick = () => li.remove()
+    list.appendChild(li)
+    task.value=""
+  }
+</script>
+</body>
+</html>
